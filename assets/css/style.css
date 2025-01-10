@@ -1,3 +1,61 @@
+:root {
+    /* CSS HEX */
+    --yale-blue: #1B347Aff;
+    --slate-gray: #7A7E91ff;
+    --rich-black: #000215ff;
+    --delft-blue: #283459ff;
+    --penn-blue: #0A1B55ff;
+
+    /* CSS HSL */
+    --yale-blue: hsla(224, 64%, 29%, 1);
+    --slate-gray: hsla(230, 9%, 52%, 1);
+    --rich-black: hsla(234, 100%, 4%, 1);
+    --delft-blue: hsla(225, 38%, 25%, 1);
+    --penn-blue: hsla(226, 79%, 19%, 1);
+
+    /* CSS HEX */
+    --eggplant: #61505Fff;
+    --cool-gray: #9C9EABff;
+    --licorice: #161010ff;
+    --licorice-2: #1C1616ff;
+    --licorice-3: #201A1Bff;
+
+    /* CSS HSL */
+    --eggplant: hsla(307, 10%, 35%, 1);
+    --cool-gray: hsla(232, 8%, 64%, 1);
+    --licorice: hsla(0, 16%, 7%, 1);
+    --licorice-2: hsla(0, 12%, 10%, 1);
+    --licorice-3: hsla(350, 10%, 11%, 1);
+
+    /* CSS HEX */
+    --night: #141619ff;
+    --slate-gray: #6A808Aff;
+    --oxford-blue: #1D2539ff;
+    --rich-black: #14181Fff;
+    --charcoal: #374B5Dff;
+
+    /* CSS HSL */
+    --night: hsla(216, 11%, 9%, 1);
+    --slate-gray: hsla(199, 13%, 48%, 1);
+    --oxford-blue: hsla(223, 33%, 17%, 1);
+    --rich-black: hsla(218, 22%, 10%, 1);
+    --charcoal: hsla(208, 26%, 29%, 1);
+
+    /* CSS HEX */
+    --licorice: #0D0000ff;
+    --chocolate-cosmos: #5C1521ff;
+    --black: #000000ff;
+    --dark-purple: #381825ff;
+    --rosy-brown: #D18F7Dff;
+
+    /* CSS HSL */
+    --licorice: hsla(0, 100%, 3%, 1);
+    --chocolate-cosmos: hsla(350, 63%, 22%, 1);
+    --black: hsla(0, 0%, 0%, 1);
+    --dark-purple: hsla(336, 40%, 16%, 1);
+    --rosy-brown: hsla(13, 48%, 65%, 1);
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,7 +63,7 @@
 }
 
 body {
-    background-image: url(/assets/img/starspace2.png);
+    background-image: url(/assets/img/Site-background-dark.webp);
     background-size: cover;
     background-repeat: repeat-y;
     background-position: center center;
@@ -13,13 +71,61 @@ body {
     font-weight: 700;
     font-style: normal;
     color: white;
-    font-size: 2.5rem;
+}
+
+
+section {
+    font-size: 2rem;
     text-transform: uppercase;
+    display: flex;
+    margin: 2rem;
+}
+
+
+.first-info {
+    height: 40vh;
+    background-color: var(--delft-blue);
+    display: flex;
+    justify-content: center;
 }
 
 .text-content {
-    width: 100%;
-    background-color: red;
     display: flex;
-    
+    /* background-color: purple; */
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 0 2rem;
 }
+
+
+
+.text-content p {
+    text-wrap: nowrap;
+    margin: 0 5px;
+}
+
+.ep-cards {
+    font-size: 1rem;
+}
+
+.floating-bebop {
+    position: relative;
+    height: 100vh;
+    background: url('stars-bg.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .floating-bebop img {
+    width: 200px;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
